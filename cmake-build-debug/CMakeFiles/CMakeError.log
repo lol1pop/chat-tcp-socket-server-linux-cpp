@@ -1,0 +1,33 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/rem/ClionProject/OS/lab9cpp/server/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bbd72/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bbd72.dir/build.make CMakeFiles/cmTC_bbd72.dir/build
+make[1]: вход в каталог «/home/rem/ClionProject/OS/lab9cpp/server/cmake-build-debug/CMakeFiles/CMakeTmp»
+Building C object CMakeFiles/cmTC_bbd72.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_bbd72.dir/CheckSymbolExists.c.o   -c /home/rem/ClionProject/OS/lab9cpp/server/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_bbd72
+/home/rem/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/183.4588.63/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bbd72.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_bbd72.dir/CheckSymbolExists.c.o  -o cmTC_bbd72 
+/usr/bin/ld: CMakeFiles/cmTC_bbd72.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_bbd72.dir/build.make:87: cmTC_bbd72] Ошибка 1
+make[1]: выход из каталога «/home/rem/ClionProject/OS/lab9cpp/server/cmake-build-debug/CMakeFiles/CMakeTmp»
+make: *** [Makefile:121: cmTC_bbd72/fast] Ошибка 2
+
+File /home/rem/ClionProject/OS/lab9cpp/server/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

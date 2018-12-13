@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rem/ClionProject/OS/lab9cpp/server/main.cpp
+errno.h
+-
+netinet/in.h
+-
+pthread.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+sys/socket.h
+-
+unistd.h
+-
+
